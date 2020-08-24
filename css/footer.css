@@ -134,3 +134,19 @@
 	}
 	
 }
+	
+@media only screen and (max-width: 768px){
+	.footer .info{
+		border-bottom: none;
+		height: 15px;
+		line-height: 15px;
+		margin-bottom: 1px;
+		padding-bottom:15px;
+	}
+	.footer .copy{
+		padding-top:15px;
+		display: inline-block;
+		height: 15px;
+		line-height: 15px;
+	}
+}
