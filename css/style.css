@@ -1,0 +1,232 @@
+/* 
+ 初始化的样式 
+ */
+*{
+	padding: 0;
+	margin: 0;
+}
+.nav{
+	/* 默认 */
+	width: 100%;
+	height: 44px;
+	background-color: rgba(0,0,0,0.8);
+	/* 
+	 r->red
+	 g->green
+	 b->blue
+	 a->opacity
+	 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 999;
+	left: 0;
+	top: 0;
+}
+.nav a{
+	color: #fff;
+	/* 设置下划线  默认underline*/
+	text-decoration: none;
+	width: 102px;
+	text-align: center;
+	font-family: "SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+	font-size: 14px;
+	line-height: 3.14286;
+	font-weight: 400;
+	color: #f5f5f7;
+}
+
+.nav .logo{
+	height: 44px;
+	background-image: url(../img/logo.svg);
+	background-repeat: no-repeat;
+	/* 设置背景图片的位置 */
+	background-position: center;
+}
+
+.nav .search{
+	height: 44px;
+	background-size: 18px 88px;
+	background-image: url(../img/search.svg);
+	background-repeat: no-repeat;
+	/* 设置背景图片的位置 */
+	background-position: center 0;
+}
+
+.nav .buy{
+	height: 44px;
+	background-image: url(../img/buy.svg);
+	background-repeat: no-repeat;
+	/* 设置背景图片的位置 */
+	background-position: center;
+}
+
+.toggleButton{
+	height: 44px;
+	width: 44px;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.toggleButton .line{
+	height: 1px;
+	width: 18px;
+	background-color: #fff;
+	display: none;
+	transition: all 0.5s;
+	
+	
+}
+.toggleButton .line:nth-child(1){
+	position: absolute;
+	left: calc(50% - 9px);
+	top: 14px;
+	/* 设置旋转中心点 */
+	transform-origin: left;
+}
+
+.toggleButton .line:nth-child(2){
+	position: absolute;
+	left: calc(50% - 9px);
+	top: 26px;
+	/* 设置旋转中心点 */
+	transform-origin: left;
+}
+
+.navpage{
+	display: flex;
+	height: 0vh;
+	width: 100vw;
+	transition: all .8s; 
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 998;
+}
+
+/* 设定屏幕小于768像素时的像素样式 */
+@media only screen and (max-width:768px) {
+	.toggleButton{
+		display: flex;
+		z-index: 999;
+		position: relative;
+	}
+	.nav .logo{
+		z-index: 999;
+		position: relative;
+	}
+	.toggleButton .line{
+		display: block;
+	}
+	.nav .text,.nav .search{
+		display: none;
+	}
+	.nav{
+		justify-content: space-between;
+	}
+	.nav a{
+		width: 50px;
+	}
+	.nav .toggleButton{
+		order: 1;
+	}
+	.nav .logo{
+		order: 2;
+		
+	}
+	.nav .buy{
+		order: 3;
+	}
+	
+	#choose:checked~.toggleButton .line:nth-child(1){
+		transform: rotate(45deg);
+	}
+	
+	#choose:checked~.toggleButton .line:nth-child(2){
+		transform: rotate(-45deg);
+	}
+	
+	/* 设定复选框为选中状态时，导航页面显示 */
+	#choose:checked~.navpage{
+		display: flex;
+		/* 
+		 vw:viewport width:100vw
+		 vh:viewport height:100vh
+		 */
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		top: 0;
+		background-color: #000;
+		flex-direction: column;
+		padding-top: 50px;
+		z-index: 998;
+		
+	}
+	
+	.searchInput{
+		margin: 0 28px 28px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 36px;
+		border-radius: 4px;
+		color: #ccc;
+		background-color: rgba(45,45,45,0.98);
+	}
+	.navpage .navMain{
+		width: 100%;
+	}
+	.searchInput .icon{
+		width: 32px;
+		height: 36px;
+		/*
+		 注意：当设定背景图片，要考虑图片url，重复，位置，尺寸
+		 */
+		background-image: url(../img/search.svg);
+		background-size: 18px 78px;
+		background-repeat: no-repeat;
+		background-position: center 0;
+	}
+	.searchInput input{
+		flex: 1;
+		margin: 0 auto;
+		height: 100%;
+		background: transparent;
+		border: none;
+		outline: none;
+		color: #FFFFFF;
+	}
+	
+	hr{
+		border-color: #333;
+	}
+	
+	.navList{
+		margin: 0 28px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	
+	.navList a{
+		width: 100%;
+		height: 44px;
+		color: #FFFFFF;
+		text-align: left;
+		border-bottom: 1px solid #333;
+		line-height: 44px;
+	}
+	
+	.navList a:last-child{
+		border: none;
+	}
+	
+}

@@ -1,0 +1,164 @@
+.hbanner{
+	display: flex;
+	text-align: center;
+	color: #1d1d1f;
+}
+
+.hbanner .banner{
+	flex: 1;
+	background-color:#fafafa;
+	height: 624px;
+	position: relative;
+}
+
+.hbanner .banner:nth-child(2){
+	background-color: #f1f1f3;
+}
+
+.hbanner .banner h4{
+	font-size: 40px;
+	line-height: 1.1;
+	font-weight: 600;
+	letter-spacing: 0em;
+    font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.hbanner .banner h5{
+	font-size: 21px;
+	line-height: 1.2381;
+	font-weight: 400;
+	letter-spacing: .016em;
+	font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+	margin-top: 4px;
+}
+
+.hbanner .banner .link a{
+	font-size: 17px;
+	line-height: 1.23536;
+	font-weight: 400;
+	letter-spacing: -.022em;
+	font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+	margin-top: .7em;
+	color: #06c;
+}
+
+.hbanner .banner:nth-child(1){
+	margin: 10px 5px 10px 10px;
+}
+
+.hbanner .banner:nth-child(2){
+	margin: 10px 10px 10px 5px;
+
+}
+
+.hbanner .banner:nth-child(1) .hBackImgWrap{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/hbanner1.jpg);
+	background-size: 503px 323px;
+	background-repeat: no-repeat;
+	background-position: center bottom; 
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.hbanner .banner:nth-child(2) .hBackImgWrap{
+	width: 100%;
+	height: 100%;
+	background-size: 706px 385px;
+	background-image: url(../img/hbanner2.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+
+@media only screen and (max-width: 1068px){	
+	.hbanner .banner{
+		flex: 1;
+		background-color:#fafafa;
+		height: 400px;
+		position: relative;
+	}
+	
+	.hbanner .banner:nth-child(1) .hBackImgWrap{
+		width: 100%;
+		height: 100%;
+		background-image: url(../img/hbanner1.jpg);
+		background-size: 342px 252px;
+		background-repeat: no-repeat;
+		background-position: center bottom; 
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.hbanner .banner:nth-child(2) ,link{
+		position: relative;
+		z-index: 2;
+	}
+	.hbanner .banner:nth-child(2) .hBackImgWrap{
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		background-size: 370px 250px;
+		background-image: url(../img/hbanner2.jpg);
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}
+
+/* 设定屏幕小于768像素时的像素样式 */
+@media only screen and (max-width: 768px) {
+	.hbanner{
+		flex-direction: column;
+		height: 1145px;
+	}
+	.hbanner .banner{
+		flex: 1;
+		background-color:#fafafa;
+		position: relative;
+	}
+	
+	.hbanner .banner:nth-child(1){
+		margin: 10px 10px 5px 10px;
+	}
+	
+	.hbanner .banner:nth-child(2){
+		margin: 5px 10px 10px 10px;
+	
+	}
+	
+	.hbanner .banner:nth-child(1) .hBackImgWrap{
+		width: 100%;
+		height: 100%;
+		background-image: url(../img/hbanner1.jpg);
+		background-size: 342px 252px;
+		background-repeat: no-repeat;
+		background-position: center bottom; 
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.hbanner .banner:nth-child(2) ,link{
+		position: relative;
+		z-index: 2;
+	}
+	.hbanner .banner:nth-child(2) .hBackImgWrap{
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		background-size: 370px 250px;
+		background-image: url(../img/hbanner2.jpg);
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}
