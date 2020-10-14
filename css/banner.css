@@ -54,7 +54,7 @@
 	.banner .backImgWrap{
 		width: 100%;
 		height: 100%;
-		background-size: 796px 455px;
+		background-size: 796px 430px;
 		background-repeat: no-repeat;
 		background-image: url(../img/banner1.jpg);
 		background-position: center top; 
@@ -87,7 +87,7 @@
 	.banner .backImgWrap{
 		width: 100%;
 		height: 100%;
-		background-size: 346px 326px;
+		background-size: 346px 300px;
 		background-repeat: no-repeat;
 		background-image: url(../img/banner2.jpg);
 		background-position: center top; 
